@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Generator</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    Image Generator
+    <div class="header-btns">
+      <button class="header-btn" id="favoritesBtn">Favorites</button>
+      <button class="header-btn" id="themeToggle">Theme</button>
+      <span id="authArea">
+        <button class="header-btn" id="loginBtn">Login</button>
+        <button class="header-btn" id="signupBtn">Sign Up</button>
+      </span>
+      <button class="header-btn" id="logoutBtn" style="display:none;">Logout</button>
+    </div>
+  </header>
+  <div class="container">
+    <div class="button-container">
+      <button id="generateButton">Generate</button>
+    </div>
+    <div class="images-grid" id="imagesGrid">
+      <!-- Images load here via infinite scrolling -->
+    </div>
+  </div>
+
+  <!-- Popup overlay -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-content">
+      <div class="popup-header">
+        <button class="popup-btn" id="downloadBtn">&#8681;</button>
+        <button class="popup-btn" id="slideshowBtn">&#9658;</button>
+      </div>
+      <img id="popupImage" src="" alt="Full Image">
+      <button class="carousel-btn" id="prevBtn">&#10094;</button>
+      <button class="carousel-btn" id="nextBtn">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Favorites modal -->
+  <div class="favorites-modal" id="favoritesModal">
+    <div class="favorites-close">
+      <button id="closeFavoritesBtn">Close</button>
+    </div>
+    <h2>Your Favorites</h2>
+    <div class="favorites-grid" id="favoritesGrid"></div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <button class="modal-close" id="closeLoginModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="modal-overlay" id="signupModal">
+    <div class="modal-content">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" id="signupUsername" placeholder="Username" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <button class="modal-close" id="closeSignupModal">Close</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</html>
