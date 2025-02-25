@@ -10,8 +10,7 @@ let currentUser = null; // Holds the username of the logged-in user
 
 // Base image URLs – add more as needed
 const baseLinks = [
-  "https://i.imx.to/i/2025/02/10/5x0999.jpg",
-  "https://i.imx.to/i/2025/02/22/5y8s3x.jpg"
+  "https://i004.imx.to/i/2023/11/28/4f8p5h.jpg"
 ];
 
 // Allowed characters for random string (a-z and 0-9)
